@@ -1,0 +1,159 @@
+:root {
+  --primary: #5d5f95;
+  --lightPrimary: #6769a6;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+body,
+html {
+  margin: 0px;
+  padding: opx;
+  scroll-behavior: smooth;
+  min-width: 350px;
+}
+input,
+textarea {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.navbar {
+  background: #ccc;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.hover-text {
+  color: var(--primary);
+  transition: color 0.3s;
+}
+
+.hover-text:hover {
+  color: rgb(12, 12, 12);
+}
+
+a {
+  text-decoration: none !important ;
+}
+.divider {
+  height: 2px;
+  background: #e7e7e7;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.rounded_card {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin-left: 20px;
+  box-shadow: 2px 2px 4px 3px #e7e7e7;
+  cursor: pointer;
+  width: 30%;
+  height: 300px;
+  transition: all 0.5s;
+}
+.rounded_card:hover {
+  background-color: #eae6f9ea;
+}
+.logo_wrapper {
+  border: 1px dashed var(--primary);
+  font-weight: bold;
+  font-size: 13px;
+  padding: 5 px;
+  letter-spacing: 5px;
+  background-color: var(--lightPrimary);
+  color: white;
+}
+.nav_item {
+  font-weight: bold;
+  font-size: 14px;
+}
+.flex_container {
+  display: flex;
+  padding: 5px;
+}
+.justifier_navbar {
+  justify-content: space-between;
+}
+
+.profile_images {
+  height: 280px;
+  width: 830px;
+  background: blue;
+  border-radius: 50%;
+  background: url("./../images/anish.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.primary_button {
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 0;
+  background: #5d5f95;
+  color: #eff;
+  font-weight: bold;
+  box-shadow: 3px 3px 2.5px 2px #5c4b9cfa;
+  transition: all 0.4s;
+}
+.primary_button:hover {
+  padding: 18px;
+}
+.call_button {
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  background: rgb(1, 8, 128);
+  color: #f9f9fd;
+  font-weight: bold;
+  /* box-shadow: 3px 3px 3px 3px #222831; */
+  transition: all 0.4s;
+}
+.call_button:hover {
+  padding: 14px;
+}
+.primary_banner {
+  background: #062f54;
+  background-image: linear-gradient(to top right, #222831, #04044fe8),
+    url(./../images/contact.jpg);
+  padding: 30px;
+}
+.contact_picture {
+  background: blue;
+  border-radius: 80%;
+  height: 300px;
+  width: 300px;
+  background: url(./../images/telephon.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.footer {
+  background: #222831;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .flex_container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .contact_picture {
+    display: none;
+  }
+  .rounded_card {
+    width: auto;
+  }
+  .navbar_mobile {
+    flex-direction: row !important;
+  }
+}
