@@ -110,7 +110,7 @@ a {
   max-width: 600px;
   margin: auto;
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 20px;  
   background: #fff;
 }
 
@@ -154,7 +154,7 @@ a {
   width: 830px;
   background: blue;
   border-radius: 50%;
-  background: url("./../images/anish.jpg");
+  background: url("./../images/ak.jpg");
   background-size: cover;
   background-position: center;
 }
