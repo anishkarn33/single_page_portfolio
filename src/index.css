@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: 0 0% 4%;
+  --bg-secondary: 240 5% 8%;
+  --bg-tertiary: 240 4% 12%;
+  --text-primary: 240 6% 96%;
+  --text-secondary: 240 4% 64%;
+  --text-muted: 240 4% 36%;
+  --accent: 217 91% 60%;
+  --accent-hover: 221 83% 53%;
+  --border: 240 4% 16%;
+  --success: 142 71% 45%;
+}
+
+:root.light {
+  --bg-primary: 0 0% 98%;
+  --bg-secondary: 0 0% 96%;
+  --bg-tertiary: 0 0% 92%;
+  --text-primary: 240 10% 4%;
+  --text-secondary: 240 4% 36%;
+  --text-muted: 240 4% 56%;
+  --accent: 217 91% 50%;
+  --accent-hover: 221 83% 47%;
+  --border: 240 6% 90%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    @apply scroll-smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply bg-bg-primary text-foreground-primary transition-colors duration-500 ease-in-out;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  ::selection {
+    @apply bg-accent text-white;
+  }
+}
+
+@layer components {
+  .editorial-heading {
+    @apply text-4xl md:text-5xl font-semibold tracking-tight leading-tight;
+    letter-spacing: -0.02em;
+  }
+  
+  .section-divider {
+    @apply h-px w-full bg-border my-16;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-foreground-muted rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-foreground-secondary;
+}
